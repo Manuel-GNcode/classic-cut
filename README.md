@@ -28,7 +28,7 @@
 1. **Clonar el repositorio**
    ```bash
    git clone <url-del-repositorio>
-   cd barbershop
+   cd classic-cut
    ```
 
 2. **Instalar dependencias**
