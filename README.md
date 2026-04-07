@@ -23,7 +23,7 @@
 - [Google Fonts](https://fonts.google.com/) - Tipografías (Manrope, Inter)
 - [Material Symbols](https://fonts.google.com/icons) - Iconografía
 
-## 🚀 Inicio
+## 🚀 Inicio rápido
 
 1. **Clonar el repositorio**
    ```bash
