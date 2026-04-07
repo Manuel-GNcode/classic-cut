@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.glass-card {
+  background: rgba(28, 27, 27, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.gold-glow:hover {
+  box-shadow: 0 0 20px rgba(242, 202, 80, 0.3);
+}
+
+/* Global Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #131313;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f2ca50;
+  border-radius: 20px;
+  border: 2px solid #131313; /* Crea un efecto de barra flotante */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d4ae3b; /* Dorado ligeramente más oscuro al pasar el cursor */
+}
+
+/* Firefox Support */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #f2ca50 #131313;
+}
