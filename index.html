@@ -50,21 +50,25 @@
                 Classic &amp; Cut
             </div>
             <nav class="hidden md:flex items-center gap-8">
-                <a class="text-[#d0c5af] hover:text-[#f2ca50] font-headline font-bold tracking-tight hover:scale-105 transition-all"
+                <a id="services-nav" data-i18n="nav.services"
+                    class="text-[#d0c5af] hover:text-[#f2ca50] font-headline font-bold tracking-tight hover:scale-105"
                     href="#services">Servicios</a>
-                <a class="text-[#d0c5af] hover:text-[#f2ca50] font-headline font-bold tracking-tight hover:scale-105 transition-all"
+                <a id="booking-nav" data-i18n="nav.booking"
+                    class="text-[#d0c5af] hover:text-[#f2ca50] font-headline font-bold tracking-tight hover:scale-105"
                     href="#booking">Calendario</a>
-                <a class="text-[#d0c5af] hover:text-[#f2ca50] font-headline font-bold tracking-tight hover:scale-105 transition-all"
+                <a id="location-nav" data-i18n="nav.location"
+                    class="text-[#d0c5af] hover:text-[#f2ca50] font-headline font-bold tracking-tight hover:scale-105"
                     href="#location">Ubicación</a>
             </nav>
-            <button
-                class="bg-gradient-to-br from-primary to-primary-container text-on-primary-fixed px-6 py-2 rounded font-bold hover:scale-105 transition-transform duration-200 active:scale-95 gold-glow">
-                Reservar Ahora
+            <button id="lang-toggle"
+                class="bg-[#d0c5af] text-on-primary-fixed px-4 py-1 rounded font-bold hover:scale-105 transition-transform duration-200 active:scale-95 gold-glow flex items-center gap-1 text-sm">
+                <span id="lang-text">ES</span> <span id="icon-language"
+                    class="material-symbols-outlined">language</span>
             </button>
         </div>
     </header>
     <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center justify-center pt-18 overflow-hidden">
+    <section id="hero" class="relative min-h-screen flex items-center justify-center pt-18 overflow-hidden">
         <div class="absolute inset-0 z-0">
             <img alt="Luxury barbershop interior" class="w-full h-full object-cover brightness-[0.3] grayscale-[0.5]"
                 data-alt="Cinematic wide shot of a luxury dark-themed barbershop with vintage leather chairs and warm amber atmospheric lighting"
@@ -72,20 +76,24 @@
             <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
         </div>
         <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
-            <span
+            <span data-i18n="hero.since"
                 class="inline-block px-4 py-1 mb-6 border border-outline-variant/30 text-primary text-xs font-bold uppercase tracking-[0.3em] bg-surface-container-low/50 backdrop-blur">
                 Desde 1924
             </span>
             <h1
                 class="font-headline font-extrabold text-5xl md:text-8xl text-on-surface leading-[1.1] mb-8 tracking-tighter">
-                El arte de la <span class="text-primary italic">caballerosidad</span>
+                <span data-i18n="hero.title_start">El arte de la </span><span data-i18n="hero.title_highlight"
+                    class="text-primary italic">caballerosidad</span>
             </h1>
-            <p class="text-on-surface-variant text-lg md:text-xl max-w-2xl mx-auto mb-10 font-medium">
-                Una experiencia de grooming premium diseñada para el hombre moderno que valora el legado de la
+            <p data-i18n="hero.description"
+                class="text-on-surface-variant text-lg md:text-xl max-w-2xl mx-auto mb-10 font-medium">
+                Una experiencia de barbería premium diseñada para el hombre moderno que valora el legado de la
                 tradición.
             </p>
             <div class="flex flex-row items-center justify-center">
-                <button
+                <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+                <button data-i18n="hero.btn_book"
+                    onclick="Calendly.initPopupWidget({url: 'https://calendly.com/wilddev16/nueva-reunion?hide_gdpr_banner=1&background_color=131313&text_color=e5e2e1&primary_color=f2ca50'});return false;"
                     class="w-full sm:w-auto px-10 py-4 bg-gradient-to-br from-primary to-primary-container text-on-primary-fixed font-bold rounded-lg text-lg hover:scale-105 transition-all duration-300 gold-glow">
                     Reserva tu Cita
                 </button>
@@ -96,11 +104,13 @@
         </div>
     </section>
     <!-- Services Section -->
-    <section class="py-24 px-8 bg-background relative overflow-hidden" id="services">
+    <section id="services" class="py-24 px-8 bg-background relative overflow-hidden">
         <div>
             <div class="mb-10">
-                <h2 class="label-md text-primary font-bold uppercase tracking-[0.2em] mb-4">Nuestros Servicios</h2>
-                <h3 class="font-headline font-bold text-4xl md:text-5xl text-on-surface tracking-tight">Cortes de
+                <h2 data-i18n="services.label" class="label-md text-primary font-bold uppercase tracking-[0.2em] mb-4">
+                    Nuestros Servicios</h2>
+                <h3 data-i18n="services.title"
+                    class="font-headline font-bold text-4xl md:text-5xl text-on-surface tracking-tight">Cortes de
                     Precisión</h3>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -114,18 +124,18 @@
                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQ9j0oO-HjOHlfAI-lA1dAMqfp00eijwFx7_Iye88F3PhurrdGAt2ubIu-CDMRIl6ehwCKg-Z-rUivRbENIGn1MjN3lnRw7RqrG2C-UmxJnWD67LTC3yejetgyKkOYeqCEKzeTIgeXWWgI5ImYbqZahL5kbqNEYTh-GH8UsRU5fUVH1sxBNDBZDffEJLt1IcRCRYekim5BXBrlT7IDaBarHMlVz9vaxDqrr79nTNKG9XsXGV1goMKBdQhjNyY6N0m8laNWUutov94" />
                     </div>
                     <div class="p-8">
-                        <div class="flex justify-between items-start mb-4">
-                            <h4 class="font-headline font-bold text-2xl text-on-surface">Corte de cabello</h4>
-                            <span class="text-primary font-bold text-xl">$35</span>
+                        <div class="mb-4">
+                            <h4 data-i18n="services.cut_title" class="font-headline font-bold text-2xl text-on-surface">
+                                Corte de cabello</h4>
                         </div>
-                        <p class="text-on-surface-variant mb-6 text-sm leading-relaxed">
+                        <p data-i18n="services.cut_desc" class="text-on-surface-variant mb-6 text-sm leading-relaxed">
                             Corte clásico o moderno con técnica de tijera y máquina, terminado con lavado y peinado
                             premium.
                         </p>
                         <div class="flex items-center text-primary text-sm font-bold tracking-widest uppercase">
-                            <span>45 min</span>
+                            <span data-i18n="services.cut_time">45 min</span>
                             <span class="mx-3 text-outline-variant">|</span>
-                            <span>Cuidado Premium</span>
+                            <span data-i18n="services.cut_price">$20.000 COL</span>
                         </div>
                     </div>
                 </div>
@@ -139,18 +149,18 @@
                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkKbHCoM8VKtxlEDAlP3UirE2zx8K7riMcVQ3zNQrj-nBxoIKLNc08lsUdYh4-siu7afXKqXH_aWtFznQx8CtrUK6SiO2o7S4JYj6jTbL1DJ0_Pd_ORlkQqu6GVaivfYd3PfpM65ZCez1bv-he_o6FTiM9bCfsb-E1NcpTxvA3-TcXzZDSZfyjkhFPeL2wffnYSabrqb7SP4CvYuVFCTZPIAxOC0n9veKCJ_XLnc3Vf92_M58WGPPYADyB98lwGe1-U6OhN-mKNg8" />
                     </div>
                     <div class="p-8">
-                        <div class="flex justify-between items-start mb-4">
-                            <h4 class="font-headline font-bold text-2xl text-on-surface">Arreglo de barba</h4>
-                            <span class="text-primary font-bold text-xl">$25</span>
+                        <div class="mb-4">
+                            <h4 data-i18n="services.beard_title"
+                                class="font-headline font-bold text-2xl text-on-surface">Arreglo de barba</h4>
                         </div>
-                        <p class="text-on-surface-variant mb-6 text-sm leading-relaxed">
+                        <p data-i18n="services.beard_desc" class="text-on-surface-variant mb-6 text-sm leading-relaxed">
                             Perfilado meticuloso con navaja, aceites esenciales y masaje tonificante para la piel
                             facial.
                         </p>
                         <div class="flex items-center text-primary text-sm font-bold tracking-widest uppercase">
-                            <span>30 min</span>
+                            <span data-i18n="services.beard_time">30 min</span>
                             <span class="mx-3 text-outline-variant">|</span>
-                            <span>Esculpido</span>
+                            <span data-i18n="services.beard_price">$15.000 COL</span>
                         </div>
                     </div>
                 </div>
@@ -164,18 +174,18 @@
                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuAo3rt4RStPdLffJSq4rwBUCEQ-OE2LOl1sZK27YOFj9AhmgZUWhNhBTWizavkca-DG2qrgC8oHCca3lX-QS696o8Lygwa7DG1JBH_4eV5oS0W4b-94tPfHu7MAR_S5wRjXWzN9s2D2cdM3GN4KXivAs7l88JHs9b8SHMjxo1ROIs2RxP5gWkz99mwpTOaqVBEB0a8HRu9ycskcUJWFQSDwa8brjMjqUZeat_mCDAZZ7coxpd0W_JhS1gbyzuaPU0yxBpo0rHfc6d8" />
                     </div>
                     <div class="p-8">
-                        <div class="flex justify-between items-start mb-4">
-                            <h4 class="font-headline font-bold text-2xl text-on-surface">Ritual toalla caliente</h4>
-                            <span class="text-primary font-bold text-xl">$20</span>
+                        <div class="mb-4">
+                            <h4 data-i18n="services.towel_title"
+                                class="font-headline font-bold text-2xl text-on-surface">Ritual toalla caliente</h4>
                         </div>
-                        <p class="text-on-surface-variant mb-6 text-sm leading-relaxed">
+                        <p data-i18n="services.towel_desc" class="text-on-surface-variant mb-6 text-sm leading-relaxed">
                             Afeitado tradicional con espuma caliente, toallas al vapor y aceites relajantes de
                             eucalipto.
                         </p>
                         <div class="flex items-center text-primary text-sm font-bold tracking-widest uppercase">
-                            <span>25 min</span>
+                            <span data-i18n="services.towel_time">25 min</span>
                             <span class="mx-3 text-outline-variant">|</span>
-                            <span>Experiencia</span>
+                            <span data-i18n="services.towel_price">$10.000 COL</span>
                         </div>
                     </div>
                 </div>
@@ -183,13 +193,14 @@
         </div>
     </section>
     <!-- Appointment Section -->
-    <section class="py-16 md:py-24 px-8 bg-surface-container-low flex flex-col md:flex-row items-center justify-center"
-        id="booking">
+    <section id="booking"
+        class="py-16 md:py-24 px-8 bg-surface-container-low flex flex-col md:flex-row items-center justify-center">
         <div
             class="surface-container p-8 md:p-12 rounded-t-3xl md:rounded-l-3xl md:rounded-tr-none border border-outline-variant/10 shadow-2xl relative overflow-hidden h-auto md:h-[600px] w-full max-w-[450px] md:max-w-[550px] flex flex-col justify-center text-center md:text-left z-10">
-            <h3 class="font-headline font-extrabold text-3xl md:text-4xl text-on-surface mb-6">¿Listo para
+            <h3 data-i18n="booking.title"
+                class="font-headline font-extrabold text-3xl md:text-4xl text-on-surface mb-6">¿Listo para
                 transformar tu imagen?</h3>
-            <p class="text-on-surface-variant text-lg mb-10 max-w-xl mx-auto md:mx-0">
+            <p data-i18n="booking.desc" class="text-on-surface-variant text-lg mb-10 max-w-xl mx-auto md:mx-0">
                 Asegura tu lugar en nuestra agenda. Los cupos para fines de semana suelen agotarse rápidamente.
             </p>
             <button
@@ -204,17 +215,19 @@
             data-url="https://calendly.com/wilddev16/nueva-reunion?hide_event_type_details=1&hide_gdpr_banner=1&background_color=131313&text_color=e5e2e1&primary_color=f2ca50"
             style="min-width:320px;height:600px;">
         </div>
-        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        <!-- <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script> -->
         <!-- Final del widget integrado de Calendly -->
 
     </section>
     <!-- Location & Info Section -->
-    <section class="py-32 bg-background px-8" id="location">
+    <section id="location" class="py-32 bg-background px-8">
         <div class="max-w-7xl mx-auto">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start">
                 <div>
-                    <h2 class="label-md text-primary font-bold uppercase tracking-[0.2em] mb-4">Ubicación</h2>
-                    <h3 class="font-headline font-bold text-4xl md:text-5xl text-on-surface tracking-tight mb-12">Donde
+                    <h2 data-i18n="location.label"
+                        class="label-md text-primary font-bold uppercase tracking-[0.2em] mb-4">Ubicación</h2>
+                    <h3 data-i18n="location.title"
+                        class="font-headline font-bold text-4xl md:text-5xl text-on-surface tracking-tight mb-12">Donde
                         reside el estilo</h3>
                     <div class="flex flex-col md:flex-row lg:flex-col justify-between gap-10">
                         <div class="flex gap-6">
@@ -222,8 +235,10 @@
                                 <span class="material-symbols-outlined text-primary">location_on</span>
                             </div>
                             <div>
-                                <p class="text-on-surface font-bold text-xl mb-2">Visítanos</p>
-                                <p class="text-on-surface-variant leading-relaxed">Centro comercial Mayorca<br />Itagüí,
+                                <p data-i18n="location.visit" class="text-on-surface font-bold text-xl mb-2">Visítanos
+                                </p>
+                                <p data-i18n="location.address" class="text-on-surface-variant leading-relaxed">Centro
+                                    comercial Mayorca<br />Itagüí,
                                     Antioquia</p>
                             </div>
                         </div>
@@ -232,14 +247,17 @@
                                 <span class="material-symbols-outlined text-primary">schedule</span>
                             </div>
                             <div>
-                                <p class="text-on-surface font-bold text-xl mb-2">Horarios de Atención</p>
+                                <p data-i18n="location.hours" class="text-on-surface font-bold text-xl mb-2">Horarios de
+                                    Atención</p>
                                 <ul class="text-on-surface-variant space-y-1">
-                                    <li class="flex justify-between gap-12"><span>Lunes a Viernes</span> <span
-                                            class="text-on-surface">8:00 - 20:00</span></li>
-                                    <li class="flex justify-between gap-12"><span>Sábados</span> <span
+                                    <li class="flex justify-between gap-12"><span data-i18n="location.weekdays">Lunes a
+                                            Viernes</span> <span class="text-on-surface">8:00 - 20:00</span></li>
+                                    <li class="flex justify-between gap-12"><span
+                                            data-i18n="location.saturday">Sábados</span> <span
                                             class="text-on-surface">10:00 - 17:00</span></li>
-                                    <li class="flex justify-between gap-12 text-error/60"><span>Domingos</span>
-                                        <span>Cerrado</span>
+                                    <li class="flex justify-between gap-12 text-error/60"><span
+                                            data-i18n="location.sunday">Domingos</span>
+                                        <span data-i18n="location.closed">Cerrado</span>
                                     </li>
                                 </ul>
                             </div>
@@ -268,11 +286,12 @@
                 <div class="text-lg font-bold text-[#e5e2e1] font-headline uppercase tracking-widest">
                     Classic &amp; Cut
                 </div>
-                <p class="font-['Inter'] text-sm text-[#d0c5af]">© 2024 Classic &amp; Cut. The Modern Heirloom.</p>
+                <p data-i18n="footer.copyright" class="font-['Inter'] text-sm text-[#d0c5af]">© 2024 Classic &amp; Cut.
+                    The Modern Heirloom.</p>
             </div>
             <div class="flex items-center gap-2">
                 <span class="w-10 h-0.5 bg-primary/30"></span>
-                <span class="text-primary font-headline font-bold italic">Est. 1924</span>
+                <span data-i18n="footer.est" class="text-primary font-headline font-bold italic">Est. 1924</span>
                 <span class="w-10 h-0.5 bg-primary/30"></span>
             </div>
         </div>

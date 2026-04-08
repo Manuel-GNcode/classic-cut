@@ -2,8 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-.material-symbols-outlined {
-  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+#icon-language {
+  font-size: 18px;
+}
+
+.current-section {
+  color: #f2ca50;
+  border-bottom: 2px solid #f2ca50;
 }
 
 .glass-card {
@@ -28,11 +33,13 @@
 ::-webkit-scrollbar-thumb {
   background: #f2ca50;
   border-radius: 20px;
-  border: 2px solid #131313; /* Crea un efecto de barra flotante */
+  border: 2px solid #131313;
+  /* Crea un efecto de barra flotante */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #d4ae3b; /* Dorado ligeramente más oscuro al pasar el cursor */
+  background: #d4ae3b;
+  /* Dorado ligeramente más oscuro al pasar el cursor */
 }
 
 /* Firefox Support */

@@ -1,7 +1,53 @@
+// Leaflet
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
+// Translations
+import { translations } from './translations.js';
+
+// GSAP
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
+let currentLanguage = localStorage.getItem('language') || 'es';
+
+function setLanguage(lang) {
+  currentLanguage = lang;
+  localStorage.setItem('language', lang);
+  document.documentElement.lang = lang;
+
+  const elements = document.querySelectorAll('[data-i18n]');
+  elements.forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    const keys = key.split('.');
+    let translation = translations[lang];
+    keys.forEach(k => {
+      translation = translation ? translation[k] : null;
+    });
+
+    if (translation) {
+      el.innerHTML = translation;
+    }
+  });
+
+  const langTextEl = document.getElementById('lang-text');
+  if (langTextEl) {
+    langTextEl.textContent = lang.toUpperCase();
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+  setLanguage(currentLanguage);
+
+  const langToggle = document.getElementById('lang-toggle');
+  if (langToggle) {
+    langToggle.addEventListener('click', () => {
+      const newLang = currentLanguage === 'es' ? 'en' : 'es';
+      setLanguage(newLang);
+    });
+  }
+
   const barberLocation = [6.1606, -75.6054];
 
   // Inicializar el mapa
@@ -27,4 +73,18 @@ document.addEventListener('DOMContentLoaded', () => {
             <span>C.C. Mayorca</span>
         </div>
     `).openPopup();
+});
+
+// Animaciones de la barra de navegación
+['services', 'booking', 'location'].forEach(id => {
+  gsap.set(`#${id}-nav`, {
+    color: '#f2ca50',
+    borderBottom: '2px solid #f2ca50',
+    scrollTrigger: {
+      trigger: `#${id}`,
+      start: 'top 40%',
+      end: 'bottom 40%',
+      toggleActions: 'play reverse play reverse',
+    }
+  });
 });
