@@ -78,6 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Animaciones de la barra de navegación
 ['services', 'booking', 'location'].forEach(id => {
   gsap.set(`#${id}-nav`, {
+    paused: true,
     color: '#f2ca50',
     borderBottom: '2px solid #f2ca50',
     scrollTrigger: {

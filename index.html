@@ -44,24 +44,24 @@
 <body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary">
     <!-- Top Navigation Bar -->
     <header
-        class="fixed top-0 w-full z-50 bg-[#131313]/80 backdrop-blur-md no-border bg-gradient-to-b from-[#1c1b1b] to-transparent">
+        class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md no-border bg-gradient-to-b from-surface-container-low to-transparent">
         <div class="flex justify-between items-center px-8 py-4">
-            <div class="text-xl font-black tracking-tighter text-[#e5e2e1] font-headline">
+            <div class="text-xl font-black tracking-tighter text-on-surface font-headline">
                 Classic &amp; Cut
             </div>
             <nav class="hidden md:flex items-center gap-8">
                 <a id="services-nav" data-i18n="nav.services"
-                    class="text-[#d0c5af] hover:text-[#f2ca50] font-headline font-bold tracking-tight hover:scale-105"
+                    class="text-on-surface-variant hover:text-primary font-headline font-bold tracking-tight hover:scale-105"
                     href="#services">Servicios</a>
                 <a id="booking-nav" data-i18n="nav.booking"
-                    class="text-[#d0c5af] hover:text-[#f2ca50] font-headline font-bold tracking-tight hover:scale-105"
+                    class="text-on-surface-variant hover:text-primary font-headline font-bold tracking-tight hover:scale-105"
                     href="#booking">Calendario</a>
                 <a id="location-nav" data-i18n="nav.location"
-                    class="text-[#d0c5af] hover:text-[#f2ca50] font-headline font-bold tracking-tight hover:scale-105"
+                    class="text-on-surface-variant hover:text-primary font-headline font-bold tracking-tight hover:scale-105"
                     href="#location">Ubicación</a>
             </nav>
             <button id="lang-toggle"
-                class="bg-[#d0c5af] text-on-primary-fixed px-4 py-1 rounded font-bold hover:scale-105 transition-transform duration-200 active:scale-95 gold-glow flex items-center gap-1 text-sm">
+                class="bg-on-surface-variant text-on-primary-fixed px-4 py-1 rounded font-bold hover:scale-105 transition-transform duration-200 active:scale-95 gold-glow flex items-center gap-1 text-sm">
                 <span id="lang-text">ES</span> <span id="icon-language"
                     class="material-symbols-outlined">language</span>
             </button>
@@ -280,13 +280,14 @@
         </svg>
     </a>
     <!-- Footer -->
-    <footer class="bg-[#0e0e0e] border-t border-[#4d4635]/15 py-16">
+    <footer class="bg-surface-container border-t border-outline-variant/15 py-16">
         <div class="flex flex-col md:flex-row justify-between items-center px-8 gap-8">
             <div class="flex flex-col items-center md:items-start gap-4">
-                <div class="text-lg font-bold text-[#e5e2e1] font-headline uppercase tracking-widest">
+                <div class="text-lg font-bold text-on-surface font-headline uppercase tracking-widest">
                     Classic &amp; Cut
                 </div>
-                <p data-i18n="footer.copyright" class="font-['Inter'] text-sm text-[#d0c5af]">© 2024 Classic &amp; Cut.
+                <p data-i18n="footer.copyright" class="font-['Inter'] text-sm text-on-surface-variant">© 2024 Classic
+                    &amp; Cut.
                     The Modern Heirloom.</p>
             </div>
             <div class="flex items-center gap-2">
