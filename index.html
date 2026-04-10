@@ -43,12 +43,12 @@
 
 <body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary">
     <!-- Top Navigation Bar -->
-    <header
+    <header id="header"
         class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md no-border bg-gradient-to-b from-surface-container-low to-transparent">
         <div class="flex justify-between items-center px-8 py-4">
-            <div class="text-xl font-black tracking-tighter text-on-surface font-headline">
+            <a href="#hero" class="text-xl font-black tracking-tighter text-on-surface font-headline">
                 Classic &amp; Cut
-            </div>
+            </a>
             <nav class="hidden md:flex items-center gap-8">
                 <a id="services-nav" data-i18n="nav.services"
                     class="text-on-surface-variant font-headline font-bold tracking-tight hover:scale-105"
@@ -70,27 +70,29 @@
     <!-- Hero Section -->
     <section id="hero" class="relative min-h-screen flex items-center justify-center pt-18 overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <img alt="Luxury barbershop interior" class="w-full h-full object-cover brightness-[0.3] grayscale-[0.5]"
+            <img id="hero-img" loading="eager" alt="Luxury barbershop interior"
+                class="w-full h-full object-cover brightness-[0.3] grayscale-[0.5]"
                 data-alt="Cinematic wide shot of a luxury dark-themed barbershop with vintage leather chairs and warm amber atmospheric lighting"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpxWATzG-IqID7zEB3oi7YAgCR19gik9CU84PkJj3LYgXl3OxmZVxxPvuOWb5ZgVJXOtxTaH8MPmYm-Jm4TDmGF3pxLUcjEIEMJfQBhRgKwPyYL3SLnZINoojKxCNa3U6ehg-zKsie0d8hXCLPsHSL3MCGHKiatPzXuWdaeKiiDgKx3aRl6Q9XXJjCF7V1XHSw-VUbZR8jfspqtavZhfmCKXpv7v3WdIkhC7kQj3OP9DoE3GH4PZ0uasy9vBQL7nS_BlL56NYqid0" />
             <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
         </div>
         <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
-            <span data-i18n="hero.since"
+            <span id="hero-since" data-i18n="hero.since"
                 class="inline-block px-4 py-1 mb-6 border border-outline-variant/30 text-primary text-xs font-bold uppercase tracking-[0.3em] bg-surface-container-low/50 backdrop-blur">
                 Desde 1924
             </span>
-            <h1
+            <h1 id="hero-title"
                 class="font-headline font-extrabold text-5xl md:text-8xl text-on-surface leading-[1.1] mb-8 tracking-tighter">
-                <span data-i18n="hero.title_start">El arte de la </span><span data-i18n="hero.title_highlight"
-                    class="text-primary italic">caballerosidad</span>
+                <span id="hero-title_first" data-i18n="hero.title_start" class="block">El arte de la </span><span
+                    id="hero-title_second" data-i18n="hero.title_highlight"
+                    class="text-primary italic block">caballerosidad</span>
             </h1>
-            <p data-i18n="hero.description"
+            <p id="hero-description" data-i18n="hero.description"
                 class="text-on-surface-variant text-lg md:text-xl max-w-2xl mx-auto mb-10 font-medium">
                 Una experiencia de barbería premium diseñada para el hombre moderno que valora el legado de la
                 tradición.
             </p>
-            <div class="flex flex-row items-center justify-center">
+            <div id="hero-button" class="flex flex-row items-center justify-center">
                 <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
                 <button data-i18n="hero.btn_book"
                     onclick="Calendly.initPopupWidget({url: 'https://calendly.com/wilddev16/nueva-reunion?hide_gdpr_banner=1&background_color=131313&text_color=e5e2e1&primary_color=f2ca50'});return false;"
@@ -99,7 +101,7 @@
                 </button>
             </div>
         </div>
-        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 animate-bounce">
+        <div id="hero-scroll-down" class="absolute bottom-0 left-1/2 -translate-x-1/2 animate-bounce">
             <span class="material-symbols-outlined text-primary-container text-3xl">expand_more</span>
         </div>
     </section>
@@ -118,7 +120,7 @@
                 <div
                     class="group relative surface-container-low rounded-xl overflow-hidden hover:scale-[1.02] transition-transform duration-500 glass-card">
                     <div class="h-64 overflow-hidden">
-                        <img alt="Haircut service"
+                        <img loading="lazy" alt="Haircut service"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                             data-alt="Close-up of a sharp fade haircut being executed with high-end steel clippers in a moody barbershop setting"
                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQ9j0oO-HjOHlfAI-lA1dAMqfp00eijwFx7_Iye88F3PhurrdGAt2ubIu-CDMRIl6ehwCKg-Z-rUivRbENIGn1MjN3lnRw7RqrG2C-UmxJnWD67LTC3yejetgyKkOYeqCEKzeTIgeXWWgI5ImYbqZahL5kbqNEYTh-GH8UsRU5fUVH1sxBNDBZDffEJLt1IcRCRYekim5BXBrlT7IDaBarHMlVz9vaxDqrr79nTNKG9XsXGV1goMKBdQhjNyY6N0m8laNWUutov94" />
@@ -143,7 +145,7 @@
                 <div
                     class="group relative surface-container-low rounded-xl overflow-hidden hover:scale-[1.02] transition-transform duration-500 glass-card">
                     <div class="h-64 overflow-hidden">
-                        <img alt="Beard trim service"
+                        <img loading="lazy" alt="Beard trim service"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                             data-alt="Expert barber sculpting a beard with a straight razor, visible steam and sharp metallic tools"
                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkKbHCoM8VKtxlEDAlP3UirE2zx8K7riMcVQ3zNQrj-nBxoIKLNc08lsUdYh4-siu7afXKqXH_aWtFznQx8CtrUK6SiO2o7S4JYj6jTbL1DJ0_Pd_ORlkQqu6GVaivfYd3PfpM65ZCez1bv-he_o6FTiM9bCfsb-E1NcpTxvA3-TcXzZDSZfyjkhFPeL2wffnYSabrqb7SP4CvYuVFCTZPIAxOC0n9veKCJ_XLnc3Vf92_M58WGPPYADyB98lwGe1-U6OhN-mKNg8" />
@@ -168,7 +170,7 @@
                 <div
                     class="group relative surface-container-low rounded-xl overflow-hidden hover:scale-[1.02] transition-transform duration-500 glass-card">
                     <div class="h-64 overflow-hidden">
-                        <img alt="Hot towel ritual"
+                        <img loading="lazy" alt="Hot towel ritual"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                             data-alt="A man relaxing with a steaming white towel over his face in a dark luxury barber salon"
                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuAo3rt4RStPdLffJSq4rwBUCEQ-OE2LOl1sZK27YOFj9AhmgZUWhNhBTWizavkca-DG2qrgC8oHCca3lX-QS696o8Lygwa7DG1JBH_4eV5oS0W4b-94tPfHu7MAR_S5wRjXWzN9s2D2cdM3GN4KXivAs7l88JHs9b8SHMjxo1ROIs2RxP5gWkz99mwpTOaqVBEB0a8HRu9ycskcUJWFQSDwa8brjMjqUZeat_mCDAZZ7coxpd0W_JhS1gbyzuaPU0yxBpo0rHfc6d8" />
@@ -203,10 +205,10 @@
             <p data-i18n="booking.desc" class="text-on-surface-variant text-lg mb-10 max-w-xl mx-auto md:mx-0">
                 Asegura tu lugar en nuestra agenda. Los cupos para fines de semana suelen agotarse rápidamente.
             </p>
-            <button
+            <div
                 class="bg-primary text-on-primary-fixed py-4 px-12 rounded-lg shadow-[0_10px_30px_rgba(242,202,80,0.2)] w-full md:w-fit flex justify-center items-center">
                 <span class="material-symbols-outlined">arrow_forward</span>
-            </button>
+            </div>
         </div>
 
         <!-- Principio del widget integrado de Calendly -->
@@ -257,7 +259,7 @@
                                             class="text-on-surface">10:00 - 17:00</span></li>
                                     <li class="flex justify-between gap-12 text-error/60"><span
                                             data-i18n="location.sunday">Domingos</span>
-                                        <span data-i18n="location.closed">Cerrado</span>
+                                        <span data-i18n="location.closed" class="text-red-400">Cerrado</span>
                                     </li>
                                 </ul>
                             </div>
@@ -271,7 +273,8 @@
         </div>
     </section>
     <!-- WhatsApp FAB -->
-    <a class="fixed bottom-8 right-8 z-[60] w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300"
+    <a id="whatsapp-fab"
+        class="fixed bottom-8 right-8 z-[60] w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-transform duration-300"
         href="https://wa.me/573117818298?text=Quiero%20agendar%20una%20cita" target="_blank">
         <svg class="size-12 fill-current" viewbox="0 0 24 24">
             <path
