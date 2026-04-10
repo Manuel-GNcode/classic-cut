@@ -73,50 +73,50 @@ document.addEventListener('DOMContentLoaded', () => {
             <span>C.C. Mayorca</span>
         </div>
     `).openPopup();
-});
 
-// Animaciones de la barra de navegación
-['services', 'booking', 'location'].forEach(id => {
-  gsap.set(`#${id}-nav`, {
-    paused: true,
-    color: '#f2ca50',
-    borderBottom: '2px solid #f2ca50',
-    scrollTrigger: {
-      trigger: `#${id}`,
-      start: 'top 40%',
-      end: 'bottom 40%',
-      toggleActions: 'play reverse play reverse',
+  // Animaciones de la barra de navegación
+  ['services', 'booking', 'location'].forEach(id => {
+    gsap.set(`#${id}-nav`, {
+      paused: true,
+      color: '#f2ca50',
+      borderBottom: '2px solid #f2ca50',
+      scrollTrigger: {
+        trigger: `#${id}`,
+        start: 'top 40%',
+        end: 'bottom 40%',
+        toggleActions: 'play reverse play reverse',
+      }
+    });
+  });
+
+  // Animación de entrada
+  const tlFadeId = gsap.timeline({
+    defaults: {
+      ease: "sine.out",
+      duration: 0.5,
+      opacity: 0
     }
   });
+
+  tlFadeId.from('#hero-img', {
+    filter: 'brightness(0.5) grayscale(0)',
+    scale: 1.1,
+    duration: 1,
+  }).from('#hero-title_first', {
+    x: 100,
+    ease: 'power3.out'
+  }).from('#hero-title_second', {
+    x: -100,
+    ease: 'power3.out'
+  }, '<').from('#hero-description', {
+    y: 20,
+  }).from('#hero-button', {
+    y: 20,
+  }, '<').from('#hero-since', {
+
+  }, '<').from('#header', {
+    y: -50,
+  }, '<').from('#hero-scroll-down,#whatsapp-fab', {
+
+  }, '<')
 });
-
-// Animación de entrada
-const tlFadeId = gsap.timeline({
-  defaults: {
-    ease: "sine.out",
-    duration: 0.5,
-    opacity: 0
-  }
-});
-
-tlFadeId.from('#hero-img', {
-  filter: 'brightness(0.5) grayscale(0)',
-  scale: 1.1,
-  duration: 1,
-}).from('#hero-title_first', {
-  x: 100,
-  ease: 'power3.out'
-}).from('#hero-title_second', {
-  x: -100,
-  ease: 'power3.out'
-}, '<').from('#hero-description', {
-  y: 20,
-}).from('#hero-button', {
-  y: 20,
-}, '<').from('#hero-since', {
-
-}, '<').from('#header', {
-  y: -50,
-}, '<').from('#hero-scroll-down,#whatsapp-fab', {
-
-}, '<')
