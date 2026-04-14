@@ -12,7 +12,7 @@ export const tlFadeIn = gsap.timeline({
 });
 
 tlFadeIn.from('#hero-img', {
-  filter: 'brightness(0.5) grayscale(0)',
+  filter: 'brightness(0.8) grayscale(0)',
   scale: 1.1,
   duration: 1,
 }).from('#hero-title_first', {

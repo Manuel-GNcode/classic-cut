@@ -38,8 +38,22 @@ document.addEventListener('DOMContentLoaded', () => {
         toggleActions: 'play reverse play reverse',
       }
     });
+
+    gsap.from(`#${id}`, {
+      opacity: 0,
+      y: 50,
+      duration: 0.5,
+      ease: 'sine.out',
+      scrollTrigger: {
+        trigger: `#${id}`,
+        start: "top 80%",
+        end: "bottom 20%",
+        toggleActions: "play none none reverse",
+      }
+    });
   });
 
-  // Animación de entrada
+  // Animación de entrada del hero
   tlFadeIn.play();
+
 });
