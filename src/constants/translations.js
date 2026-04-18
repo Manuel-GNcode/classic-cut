@@ -14,7 +14,7 @@ export const translations = {
         },
         services: {
             label: "Nuestros Servicios",
-            title: "Cortes de Precisión",
+            title: "Cortes de precisión",
             cut_title: "Corte de cabello",
             cut_desc: "Corte clásico o moderno con técnica de tijera y máquina, terminado con lavado y peinado premium.",
             cut_time: "45 min",
@@ -63,7 +63,7 @@ export const translations = {
         },
         services: {
             label: "Our Services",
-            title: "Precision Cuts",
+            title: "Precision cuts",
             cut_title: "Haircut",
             cut_desc: "Classic or modern cut with scissor and clipper technique, finished with premium wash and styling.",
             cut_time: "45 min",
